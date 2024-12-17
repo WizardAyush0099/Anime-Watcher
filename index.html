@@ -99,3 +99,135 @@
 </header>
 </body>
 </html>
+<script>
+    // Toggle the hamburger menu
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('visible');  // Use 'visible' instead of 'hidden'
+}
+
+// Toggle "My Sites" links
+function toggleSites() {
+    const siteLinks = document.getElementById('site-links');
+    siteLinks.classList.toggle('hidden');
+}
+
+// Save Anime Functionality
+function saveAnime(animeName) {
+    const savedList = document.getElementById('saved-list');
+    const listItem = document.createElement('li');
+    listItem.textContent = animeName;
+    savedList.appendChild(listItem);
+    alert(`${animeName} has been saved!`);
+}
+
+// Recently Watched Anime Functionality
+function addToRecent(animeName) {
+    const recentList = document.getElementById('recent-list');
+    const listItem = document.createElement('li');
+    listItem.textContent = animeName;
+    recentList.appendChild(listItem);
+}
+
+// Open Anime Link in a New Tab
+function openLink(url) {
+    window.open(url, '_blank');
+}
+
+// Theme Changer Functionality
+let themeIndex = 0;
+const themes = [
+    { background: '#f4f4f4', color: '#333' }, // Light Theme
+    { background: '#222', color: '#fff' },   // Dark Theme
+    { background: '#ffefd5', color: '#444' }, // Soft Beige
+    { background: '#444', color: '#87cefa' }, // Blue Contrast
+    { background: '#000', color: '#ff4500' }  // Black with Orange Text
+];
+
+function changeTheme() {
+    const body = document.body;
+    body.style.backgroundColor = themes[themeIndex].background;
+    body.style.color = themes[themeIndex].color;
+    themeIndex = (themeIndex + 1) % themes.length;
+}
+
+// Search Functionality
+function searchAnime() {
+    const input = document.getElementById('search').value.toLowerCase();
+    const cards = document.querySelectorAll('.anime-card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        card.style.display = title.includes(input) ? 'block' : 'none';
+    });
+}
+
+// Show Specific Sections
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.add('hidden');
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove('hidden');
+}
+
+// Initialize Recently Watched (for demonstration)
+function initializeRecent() {
+    const recentAnime = ['Naruto Shippuden', 'One Piece'];
+    recentAnime.forEach(anime => addToRecent(anime));
+}
+
+// Call initializeRecent function if required
+initializeRecent();
+function animateText() {
+    const text = document.getElementById('animated-text');
+    let scale = 1;
+    let growing = true;
+
+    setInterval(() => {
+        if (growing) {
+            scale += 0.01;
+        } else {
+            scale -= 0.01;
+        }
+
+        if (scale >= 1.1) growing = false; // Limit the maximum scale
+        if (scale <= 1) growing = true; // Limit the minimum scale
+
+        text.style.transform = `scale(${scale})`; // Apply scale transformation
+    }, 50); // Update every 50ms
+}
+
+animateText();
+document.addEventListener("DOMContentLoaded", function () {
+    function animateText() {
+        const text = document.getElementById('animated-text');
+        if (!text) {
+            console.error('Element with ID "animated-text" not found.');
+            return;
+        }
+
+        let scale = 1;
+        let growing = true;
+
+        setInterval(() => {
+            if (growing) {
+                scale += 0.01;
+            } else {
+                scale -= 0.01;
+            }
+
+            if (scale >= 1.1) growing = false;
+            if (scale <= 1) growing = true;
+
+            text.style.transform = `scale(${scale})`;
+        }, 50);
+    }
+
+    animateText();
+});
+</script>
