@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watcher</title>
+   <!-- Add the script just before the closing body tag -->
+<script src="Anime.js"></script>
+  
+</body
+</html>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="menu" class="hidden">
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('recent')">Recently Watched</a>
+            <a href="#" onclick="showSection('saved')">Saved Anime</a>
+            <div class="other-sites">
+                <button onclick="toggleSites()">My Sites ▼</button>
+                <div id="site-links" class="hidden">
+                    <a href="https://wizardayush0099.github.io/Truth-or-Dare-Game/">Truth or Dare Game</a>
+                    <a href="https://wizardayush0099.github.io/Wizard-Web/">Wizard Web</a>
+                    <a href="https://674721e59cb9f.site123.me/">Craw69 Website</a>
+                    <a href="https://6747301db79fa.site123.me/">Music Player</a>
+                    <a href="https://wizardayush0099.github.io/Wizard-XO-/">Tic Tac Toe Game</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search Anime..." oninput="searchAnime()">
+        </div>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle" onclick="changeTheme()">💡</div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="section active">
+            <h1>Popular Anime</h1>
+            <div class="anime-container">
+                <div class="anime-card">
+                    <img src="Naruto Shippuden.img" alt="Naruto Shippuden">
+                    <h2>Naruto Shippuden</h2>
+                    <button onclick="openLink('https://www.crunchyroll.com/series/GYQ4MW246/naruto-shippuden')">Watch Anime</button>
+                    <button onclick="saveAnime('Naruto Shippuden')">Save Anime</button>
+                </div>
+
+                <div class="anime-card">
+                    <img src="Death Note.img" alt="Death Note">
+                    <h2>Death Note</h2>
+                    <button onclick="openLink('https://9anime.org.lv/death-note-dub-episode-1/')">Watch Anime</button>
+                    <button onclick="saveAnime('Death Note')">Save Anime</button>
+                </div>
+
+                <div class="anime-card">
+                    <img src="Attack on Titan.img" alt="Attack on Titan">
+                    <h2>Attack on Titan</h2>
+                    <button onclick="openLink('https://9anime.org.lv/attack-on-titan-dub-episode-1/')">Watch Anime</button>
+                    <button onclick="saveAnime('Attack on Titan')">Save Anime</button>
+                </div>
+
+                <div class="anime-card">
+                    <img src="One piece.img" alt="One Piece">
+                    <h2>One Piece</h2>
+                    <button onclick="openLink('https://chia-anime.su/one-piece-episode-1122-english-subbed')">Watch Anime</button>
+                    <button onclick="saveAnime('One Piece')">Save Anime</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="saved" class="section hidden">
+            <h2>Saved Anime</h2>
+            <ul id="saved-list"></ul>
+        </section>
+
+        <section id="recent" class="section hidden">
+            <h2>Recently Watched Anime</h2>
+            <ul id="recent-list"></ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://instagram.com" target="_blank" class="instagram-btn">Follow Me on Instagram</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="Anime.js"></script>
+    <link rel="stylesheet" href="Anime.css">
+    <header>
+    <h1 id="animated-text">It's AYUSH</h1>
+</header>
+</body>
+</html>
