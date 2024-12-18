@@ -130,6 +130,16 @@ body {
     padding: 0;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
+    /* Add a background image to the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./images/file-3rB1j88kBMnCqbuyPWT2WA.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
 
     /* Add Background Image */
     background-image: url('file-3rB1j88kBMnCqbuyPWT2WA.webp'); /* Replace 'background.jpg' with your image file path */
