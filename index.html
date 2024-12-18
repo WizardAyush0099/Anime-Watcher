@@ -12,6 +12,66 @@
 </html>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watcher</title>
+    <style>
+        /* Apply background image using inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('./images/file-3rB1j88kBMnCqbuyPWT2WA.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header */
+            color: white;
+            padding: 10px 20px;
+        }
+
+        h1#stylish-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: orange; }
+            50% { color: yellow; }
+            75% { color: green; }
+            100% { color: blue; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 id="stylish-text">It's AYUSH</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Welcome to Anime Watcher</h2>
+        <p>Enjoy your favorite anime with an amazing background!</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow me on Instagram @yourhandle</p>
+    </footer>
+</body>
+</html>
     <!-- Header -->
     <header>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
