@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
+    background-color: #f4f4f4; /* Solid color for body */
 }
 
+/* Header and Navigation Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,7 +31,7 @@ nav {
     top: 50px;
     width: 200px;
     color: white;
-    display: none; /* Keep it hidden by default */
+    display: none;
     z-index: 999;
 }
 
@@ -42,11 +43,11 @@ nav a {
 }
 
 nav.hidden {
-    display: none; /* Add .hidden to hide the menu */
+    display: none;
 }
 
 nav.visible {
-    display: block; /* Add .visible to show the menu */
+    display: block;
 }
 
 .other-sites button {
@@ -70,14 +71,21 @@ nav.visible {
     border-radius: 5px;
 }
 
+/* Anime Container Background */
 .anime-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    background-image: url('Background Theme.img'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
+/* Anime Card Styles */
 .anime-card {
     background: white;
     border: 1px solid #ddd;
@@ -102,10 +110,16 @@ nav.visible {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .anime-card button:hover {
     background-color: #e03e00;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -115,6 +129,7 @@ footer {
     padding: 10px;
 }
 
+/* Instagram Button */
 .instagram-btn {
     display: inline-block;
     background-color: #e4405f;
@@ -122,39 +137,140 @@ footer {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
 
-    /* Add Background Image */
-    background-image: url('stunning_anime_background_wallpaper_by_thehackerart_dhh42f0-fullview.jpg'); /* Replace 'background.jpg' with your image file path */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+.instagram-btn:hover {
+    background-color: #d12b47;
 }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+#agree-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#agree-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .anime-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Stylish Font and Text Styling */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Importing stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 #animated-text {
-    font-family: 'Pacifico', cursive; /* Apply the imported stylish font */
-    font-size: 3rem; /* Increase the font size */
-    text-align: center; /* Center the text horizontally */
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    text-align: center;
     margin: 20px 0;
-    transition: color 0.5s ease-in-out; /* Smooth transition for color changes */
-    animation: color-change 5s infinite; /* Infinite color-changing animation */
+    transition: color 0.5s ease-in-out;
+    animation: color-change 5s infinite;
+    font-weight: bold; /* Make text bold for better contrast */
 }
 
-/* Keyframes for changing text colors */
 @keyframes color-change {
-    0% { color: #ff4500; } /* Orange */
-    25% { color: #ff1493; } /* Deep Pink */
-    50% { color: #1e90ff; } /* Dodger Blue */
-    75% { color: #32cd32; } /* Lime Green */
-    100% { color: #ff4500; } /* Back to Orange */
+    0% { color: #ff4500; }
+    25% { color: #ff1493; }
+    50% { color: #1e90ff; }
+    75% { color: #32cd32; }
+    100% { color: #ff4500; }
 }
+
+/* Anime Card Button Hover Effects */
+.anime-card button:hover {
+    background-color: #e03e00;
+    transform: scale(1.1); /* Button grows on hover */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Increased shadow for better visibility */
+}
+.anime-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 10px;
+}
+
+.anime-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.anime-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.anime-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.anime-card button {
+    background-color: #ff4500;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.anime-card button:hover {
+    background-color: #e03e00;
+    transform: scale(1.1);
+}
+.save-anime-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.save-anime-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    }
