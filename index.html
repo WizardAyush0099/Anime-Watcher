@@ -1,34 +1,22 @@
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://js.onclckmn.com/static/onclicka.js" data-admpid="273737"></script>
-    <script async src="https://js.onclckmn.com/static/onclicka.js" data-admpid="273737"></script>
-    <script async src="https://js.onclckmn.com/static/onclicka.js" data-admpid="273521"></script>
-    <script async src="https://js.onclckmn.com/static/onclicka.js" data-admpid="273523"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933984756320127"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Watcher</title>
-   <!-- Add the script just before the closing body tag -->
-<script src="Anime.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933984756320127"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6933984756320127"
-     data-ad-slot="6581630306"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  
-</body
-</html>
+    <script src="Anime.js"></script>
+    <link rel="index.css" href="Anime.css">
 </head>
 <body>
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-policy-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Privacy Policy Agreement</h2>
+            <p>By using this site, you agree to our privacy policy. Your information will not be shared with third parties.</p>
+            <button id="agree-button">I Agree</button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -63,39 +51,46 @@
             <h1>Popular Anime</h1>
             <div class="anime-container">
                 <div class="anime-card">
-                    <img src="01ec367b44f0a568430a957e042639af.jpg" alt="Naruto Shippuden">
+                    <img src="Naruto Shippuden.img" alt="Naruto Shippuden">
                     <h2>Naruto Shippuden</h2>
-                    <button onclick="openLink('https://9anime.org.lv/naruto-shippuuden-dub-episode-1/')">Watch Anime</button>
+                    <p class="anime-summary">Naruto Shippuden follows the journey of Naruto Uzumaki, a young ninja on his path to becoming the strongest ninja in his village.</p>
+                    <button onclick="openLink('https://www.crunchyroll.com/series/GYQ4MW246/naruto-shippuden')">Watch Anime</button>
                     <button onclick="saveAnime('Naruto Shippuden')">Save Anime</button>
                 </div>
-
+<div class="anime-card" id="anime-card-1">
+    <img src="/Anime Watcher/download.webp" alt="Death Note">
+    <h3>Death Note</h3>
+    <p>A high school student discovers a notebook that grants him the power to kill anyone by writing their name in it.</p>
+    <a href="https://9anime.org.lv/demon-slayer-kimetsu-no-yaiba-mugen-train-arc-dub-episode-1/" target="_blank">
+        <button>Watch Now</button>
+    </a>
+    <button class="save-anime-btn" onclick="saveAnime('Death Note', '/Anime Watcher/download.webp', 'A high school student discovers a notebook that grants him the power to kill anyone by writing their name in it.')">Save Anime</button>
+</div>
                 <div class="anime-card">
-                    <img src="220px-Death_Note_Characters.jpg" alt="Death Note">
+                    <img src="Death Note.img" alt="Death Note">
                     <h2>Death Note</h2>
+                    <p class="anime-summary">Death Note follows Light Yagami, a high school student who discovers a notebook that allows him to kill anyone whose name he writes in it.</p>
                     <button onclick="openLink('https://9anime.org.lv/death-note-dub-episode-1/')">Watch Anime</button>
                     <button onclick="saveAnime('Death Note')">Save Anime</button>
                 </div>
 
                 <div class="anime-card">
-                    <img src="p10701949_b_v8_ah.jpg" alt="Attack on Titan">
+                    <img src="Attack on Titan.img" alt="Attack on Titan">
                     <h2>Attack on Titan</h2>
+                    <p class="anime-summary">In a world where humanity is on the brink of extinction due to giant humanoid creatures, a young soldier fights to protect his loved ones.</p>
                     <button onclick="openLink('https://9anime.org.lv/attack-on-titan-dub-episode-1/')">Watch Anime</button>
                     <button onclick="saveAnime('Attack on Titan')">Save Anime</button>
                 </div>
 
                 <div class="anime-card">
-                    <img src="757bae5a21039bac6ebace5de9affcd8.jpg" alt="One Piece">
+                    <img src="One piece.img" alt="One Piece">
                     <h2>One Piece</h2>
+                    <p class="anime-summary">One Piece is about Monkey D. Luffy and his pirate crew on a journey to find the greatest treasure ever left by the legendary Pirate, Gold Roger.</p>
                     <button onclick="openLink('https://chia-anime.su/one-piece-episode-1122-english-subbed')">Watch Anime</button>
                     <button onclick="saveAnime('One Piece')">Save Anime</button>
                 </div>
-                <div class="anime-card">
-                    <img src="757bae5a21039bac6ebace5de9affcd8.jpg" alt="One Piece">
-                    <h2>demon-slayer-kimetsu-no-yaiba-hashira-training-arc-dub-episode-1/</h2>
-                    <button onclick="openLink('https://9anime.org.lv/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-dub-episode-1/')">Watch Anime</button>
-                    <button onclick="saveAnime('Demon Slayer')">Save Anime</button>
-                </div>
             </div>
+            
         </section>
 
         <section id="saved" class="section hidden">
@@ -106,8 +101,93 @@
         <section id="recent" class="section hidden">
             <h2>Recently Watched Anime</h2>
             <ul id="recent-list"></ul>
+            <div class="anime-card">
+    <img src="Naruto Shippuden.img" alt="Naruto Shippuden">
+    <h2>Naruto Shippuden</h2>
+    <p><strong>Genre:</strong> Action, Adventure</p>
+    <p><strong>Rating:</strong> 8.5/10</p>
+    <p><strong>Summary:</strong> Naruto Shippuden follows the journey of Naruto Uzumaki, a ninja with a powerful demon fox sealed inside him, as he strives to become the strongest ninja in the world.</p>
+    <button onclick="openLink('https://www.crunchyroll.com/series/GYQ4MW246/naruto-shippuden')">Watch Anime</button>
+    <button onclick="saveAnime('Naruto Shippuden')">Save Anime</button>
+</div>
+<div class="review-section">
+    <h3>Reviews</h3>
+    <form>
+        <textarea placeholder="Write your review here..."></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+    <div class="reviews-list">
+        <p><strong>John:</strong> "Amazing anime! The storyline is fantastic!"</p>
+        <p><strong>Jane:</strong> "A must-watch for all anime lovers!"</p>
+    </div>
+</div>
+<div class="filter-section">
+    <label for="genre">Genre:</label>
+    <select id="genre">
+        <option value="all">All</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+    </select>
+</div>
+<div class="social-share">
+    <button onclick="shareOnInstagram()">Share on Instagram</button>
+    <button onclick="shareOnTwitter()">Share on Twitter</button>
+</div>
+<script>
+    function shareOnInstagram() {
+        window.open("https://www.instagram.com/share", "_blank");
+    }
+    function shareOnTwitter() {
+        window.open("https://twitter.com/share", "_blank");
+    }
+</script>
+<div class="privacy-policy">
+    <h2>Privacy Policy</h2>
+    <p>We respect your privacy. Our site does not collect personal data except for the necessary information to improve your experience.</p>
+    <button onclick="agreePrivacyPolicy()">I Agree</button>
+</div>
+
+<script>
+    function agreePrivacyPolicy() {
+        alert("Thank you for agreeing to the Privacy Policy.");
+        // You could redirect users or set a cookie after agreement.
+    }
+</script>
+<div class="discussion-board">
+    <h2>Anime Discussions</h2>
+    <textarea placeholder="Start a new discussion..."></textarea>
+    <button onclick="postDiscussion()">Post</button>
+    <div id="discussions">
+        <!-- Discussions will be dynamically added here -->
+    </div>
+</div>
+
+<script>
+    function postDiscussion() {
+        const discussionBoard = document.getElementById('discussions');
+        const discussion = document.createElement('p');
+        discussion.textContent = "New discussion about Naruto!";
+        discussionBoard.appendChild(discussion);
+    }
+</script>
+<meta name="description" content="Anime Watcher - Watch your favorite anime series like Naruto, One Piece, Death Note, and more!">
+<meta name="keywords" content="anime, watch, Naruto, One Piece, Death Note"><div class="trending">
+    <h2>Trending Anime</h2>
+    <ul>
+        <li><a href="#">Naruto Shippuden</a></li>
+        <li><a href="#">Attack on Titan</a></li>
+        <li><a href="#">One Piece</a></li>
+    </ul>
+    <section class="anime-news">
+    <h2>Latest Anime News</h2>
+    <p>New season of Naruto Shippuden coming soon!</p>
+</section>  
+</div>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
 
     <!-- Footer -->
     <footer>
@@ -116,14 +196,54 @@
 
     <!-- JavaScript -->
     <script src="Anime.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <header>
-    <h1 id="animated-text">It's AYUSH</h1>
-</header>
 </body>
-    </html>
+</html>
 <script>
-    // Toggle the hamburger menu
+  <!--Tab to edit-->
+  // Save Anime Function
+  function saveAnime(title, image, description) {
+    const animeData = {
+      title: title,
+      image: image,
+      description: description
+    };
+
+    firebase.database().ref('savedAnimes').push(animeData)
+      .then(() => {
+        alert("Anime saved successfully!");
+      })
+      .catch((error) => {
+        console.error("Error saving anime: ", error);
+        alert("Failed to save anime.");
+      });
+  }
+</script>
+<div id="saved-anime-list"></div>
+
+<script>
+  function fetchSavedAnimes() {
+    const savedAnimeList = document.getElementById("saved-anime-list");
+    savedAnimeList.innerHTML = ""; // Clear existing content
+
+    firebase.database().ref('savedAnimes').once('value', (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const anime = childSnapshot.val();
+        savedAnimeList.innerHTML += `
+          <div class="anime-card">
+            <img src="${anime.image}" alt="${anime.title}">
+            <h3>${anime.title}</h3>
+            <p>${anime.description}</p>
+          </div>
+        `;
+      });
+    });
+  }
+
+  // Call this function to display saved animes
+  fetchSavedAnimes();
+        </script>
+        <script>
+            // Toggle the hamburger menu
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('visible');  // Use 'visible' instead of 'hidden'
@@ -253,4 +373,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animateText();
 });
-</script>
+// Show Privacy Policy Modal on Page Load
+document.addEventListener("DOMContentLoaded", function() {
+    const privacyPolicyModal = document.getElementById('privacy-policy-modal');
+    privacyPolicyModal.classList.remove('hidden');
+
+    const agreeButton = document.getElementById('agree-button');
+    agreeButton.addEventListener('click', function() {
+        privacyPolicyModal.classList.add('hidden');
+    });
+});
+
+// All other JavaScript functions remain the same.
+function changeTheme() {
+    const body = document.body;
+    const themeIndex = localStorage.getItem('themeIndex') || 0;
+    const themes = [
+        { background: '#f4f4f4', color: '#333' },
+        { background: '#222', color: '#fff' },
+    ];
+    body.style.backgroundColor = themes[themeIndex].background;
+    body.style.color = themes[themeIndex].color;
+    localStorage.setItem('themeIndex', (parseInt(themeIndex) + 1) % themes.length);
+}
+const firebaseConfig = {
+    apiKey: "AIzaSyB-UhqHPTUQWV9KFNp0pVE3dOKNOtcc_4k",
+    authDomain: "anime-watcher-8962d.firebaseapp.com",
+    databaseURL: "https://anime-watcher-8962d.firebaseio.com", // Make sure the database URL is correct
+    projectId: "anime-watcher-8962d",
+    storageBucket: "anime-watcher-8962d.appspot.com", // Correct storage bucket URL
+    messagingSenderId: "190561906944",
+    appId: "1:190561906944:android:7b43aa08ecdd63dff8c3e5"
+};
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database(app);
+// Function to save the review
+function submitReview() {
+    const reviewText = document.getElementById("review-text").value;
+    const animeName = document.getElementById("anime-name").value;
+
+    if (reviewText === "" || animeName === "") {
+        alert("Please fill out both fields.");
+        return;
+    }
+
+    // Reference to the Firebase Realtime Database
+    const reviewRef = database.ref('reviews').push();
+
+    // Save the review to Firebase
+    reviewRef.set({
+        anime: animeName,
+        review: reviewText,
+        timestamp: new Date().toISOString()
+    })
+    .then(() => {
+        alert("Review submitted successfully!");
+        document.getElementById("review-form").reset();
+    })
+    .catch((error) => {
+        alert("Error submitting review: " + error.message);
+    });
+} 
+// Fetch reviews from Firebase and display them
+const reviewsList = document.getElementById("reviews-list");
+
+firebase.database().ref('reviews').on('child_added', function(snapshot) {
+    const review = snapshot.val();
+    const li = document.createElement("li");
+    li.textContent = `${review.anime}: ${review.review} (Posted on ${review.timestamp})`;
+    reviewsList.appendChild(li);
+});
+        </script>
